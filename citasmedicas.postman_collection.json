@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "b4ddd1e8-94af-4f36-a2a2-3f5b3b793dfa",
+		"name": "citasmedicas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11797328",
+		"_collection_link": "https://martian-resonance-437307.postman.co/workspace/citasmedicas~e4c56a6a-2990-4905-89cc-df6f8aa66176/collection/11797328-b4ddd1e8-94af-4f36-a2a2-3f5b3b793dfa?action=share&source=collection_link&creator=11797328"
+	},
+	"item": [
+		{
+			"name": "GET ALL citas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/get/citas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"get",
+						"citas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BY ID citas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/get/citas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"get",
+						"citas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL personas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/get/personas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"get",
+						"personas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BY ID personas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/get/personas/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"get",
+						"personas",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL doctores",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/get/doctores",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"get",
+						"doctores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST persona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\": \"Eduardo\",\r\n    \"apellidos\": \"Marin Lozada\",\r\n    \"tipo_documento\":\"cc\",\r\n    \"numero_documento\": 103478292\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/save/persona",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"save",
+						"persona"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST doctor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\": \"Ashley Emperatriz\",\r\n    \"apellidos\": \"Maestre Marin\",\r\n    \"especialidad\":\"Cirujano\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/save/doctor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"save",
+						"doctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST cita",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doctor_id\": 2,\r\n    \"persona_id\": 4,\r\n    \"fecha_hora\": \"2023-10-08 07:00:25\",\r\n    \"tipo_cita\":\"Prioritaria\",\r\n    \"estado_cita\": \"Vigente\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/save/cita",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"save",
+						"cita"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT cita",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 6,\r\n    \"doctor_id\": 2,\r\n    \"persona_id\": 4,\r\n    \"fecha_hora\": \"2023-10-08 07:00:25\",\r\n    \"tipo_cita\": \"Prioritaria\",\r\n    \"estado_cita\": \"Cancelada\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/update/cita",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"update",
+						"cita"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE cita",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/delete/cita/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"delete",
+						"cita",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
