@@ -15,7 +15,7 @@ public interface PersonaRepository extends JpaRepository<Persona, Integer> {
     @Query(value = "CALL login(:tipo,:numero)", nativeQuery = true)
     String authLog(@Param("tipo") String tipo,@Param("numero") Integer numero);
 
-    @Query(value = "SELECT * FROM PERSONA WHERE tipo_documento=:tipo and numero_documento=:numero", nativeQuery = true)
+    @Query(value = "SELECT * FROM persona WHERE tipo_documento=:tipo and numero_documento=:numero", nativeQuery = true)
     Persona findPersonaByDoc(@Param("tipo") String tipo,@Param("numero") Integer numero);
 
 }
